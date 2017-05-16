@@ -1,0 +1,23 @@
+{
+  "name": "learnenglishprepositions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korbie/learnenglishprepositions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/korbie/learnenglishprepositions/issues"
+  },
+  "homepage": "https://github.com/korbie/learnenglishprepositions#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0"
+  }
+}
