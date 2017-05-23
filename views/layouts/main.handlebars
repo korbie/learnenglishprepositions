@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="css/modal.css" rel="stylesheet">
 	
 	{{#if showTests}}
 		<link href="css/vendor/mocha.css" rel="stylesheet">
@@ -21,14 +22,54 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <h2>Welcome to my page!</h2>
+  <body style>
+  
+	<div class="modal modal-narrow fade" id="optionsModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <!--<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">Modal title</h4>
+		  </div>-->
+		  <div class="modal-body">
+			<div class="btn-group-vertical" id="optionsButtons" role="group" aria-label="...">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#optionsModal">in</button>
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#optionsModal">at</button>	
+			</div>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+		
+	<div class="container">
+		<div class="page-header"><h2>Welcome to my page!</h2></div>
+		{{{body}}}
+		<input id="getSentence" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#optionsModal" type="submit" value="Submit">
+		
+		<p>The cup is <a id="openModalLink" data-toggle="modal" data-target="#optionsModal">on</a> the table</p>
+		
+		<div class="btn-group-vertical" id="btnsPrepositions" role="group" aria-label="...">
+			<button type="button" class="btn btn-default" id="btnTo">to</button>
+			<button type="button" class="btn btn-default" id="btnFrom">from</button>
+			<button type="button" class="btn btn-default" id="btnIn">in</button>	
+			<button type="button" class="btn btn-default" id="btnAt">at</button>
+			<button type="button" class="btn btn-default" id="btnBy">by</button>	
+			<button type="button" class="btn btn-default" id="btnOn">on</button>	
+		</div>
+		
+		<div class="btn-group-vertical" id="btnsNumberOptions" role="group" aria-label="...">
+			<button type="button" class="btn btn-default" name="increase" id="btnIncrease">+</button>
+			<button type="button" class="btn btn-default" name="decrease" id="btnDecrease">-</button>	
+		</div>
 	
-	{{{body}}}
+	
+	</div>
 
+	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="libs/vendor/bootstrap.min.js"></script>
+	<script src="libs/main.js"></script>
   
 	{{#if showTests}}
 		<div id="mocha"></div>

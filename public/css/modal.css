@@ -1,0 +1,8 @@
+.modal.modal-narrow .modal-dialog {
+  width: 5%;
+}
+.modal-narrow .modal-body {
+  overflow-y: auto;
+  text-align: center;
+}
+
